@@ -229,7 +229,7 @@ const App = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/leaderboard", {
+      const response = await fetch("https://quiz-app-iyqt.onrender.com/leaderboard", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -244,7 +244,7 @@ const App = () => {
       const data = await response.json();
       console.log("Backend Response:", data);
 
-      const leaderboardResponse = await fetch("http://localhost:5000/leaderboard");
+      const leaderboardResponse = await fetch("https://quiz-app-iyqt.onrender.com/leaderboard");
       const leaderboardData = await leaderboardResponse.json();
       setLeaderboard(leaderboardData.sort((a, b) => b.score - a.score));
     } catch (error) {
