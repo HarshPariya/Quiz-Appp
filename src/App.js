@@ -10,7 +10,7 @@ const categories = ["General Knowledge", "Science", "History", "Geography", "Ran
 
 const Result = ({ score, totalQuestions, leaderboard, userAnswers, isDarkMode }) => {
   return (
-    <div className={`result-container text-center ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} p-8 rounded-2xl shadow-lg`}>
+    <div className={`result-container text-center ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-700 text-white'} p-8 rounded-2xl shadow-lg`}>
       <h2 className="text-4xl font-bold mb-6">Quiz Results</h2>
       <p className="text-2xl mb-4">
         You scored {score} out of {totalQuestions}!
@@ -23,7 +23,7 @@ const Result = ({ score, totalQuestions, leaderboard, userAnswers, isDarkMode })
         <h3 className="text-3xl font-bold mb-4">📝 Your Answers</h3>
         <ul className="space-y-4">
           {userAnswers.map((answer, index) => (
-            <li key={index} className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl">
+            <li key={index} className="bg-gray-100 dark:bg-purple-700 p-4 rounded-xl">
               <p><strong>Q:</strong> {answer.question}</p>
               <p><strong>Your Answer:</strong> {answer.userAnswer}</p>
               <p><strong>Correct Answer:</strong> {answer.correctAnswer}</p>
